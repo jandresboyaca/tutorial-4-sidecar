@@ -2,6 +2,8 @@
 ' Vista de paquetes basada en arquitectura hexagonal.
 ' Este diagrama refleja el scaffolding inicial del proyecto
 ' siguiendo el enfoque hexagonal.
+' Cada paquete corresponde a un directorio real
+' dentro del repositorio.
 
 package "src" as src_pkg {
     package "aeroalpes" {
@@ -43,6 +45,7 @@ package "src" as src_pkg {
     }
 
     package "sidecar" as sidecar_pkg {
+        ' Contiene el adaptador ubicado en src/sidecar
         package "aeroalpes" as sidecar_aeroalpes {
             package "pb2py"
             package "protos"
